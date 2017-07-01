@@ -133,14 +133,15 @@ def add_friend():
     new_friend=Spy('','',0,0.0)
 
     new_friend.name=raw_input("please ! add your friends name ? ")
+    name=new_friend.name
     new_friend.salutation=raw_input("Are they MR OR MS")
-    new_friend.name=new_friend.salutation+" "+new_friend.name
+    new_friend.name=new_friend.salutation+" "+name
     new_friend.age=int(raw_input("enter age ?"))
     new_friend.rating=float(raw_input("spy rating ?"))
 
     if len(new_friend.name)>0:
         print "spy name is not empty"
-        if (name_vali(new_friend.name)==True) and age_val(new_friend.age):
+        if (name_vali(name)==True) and age_val(new_friend.age):
             friends.append(new_friend)
 
     else:
